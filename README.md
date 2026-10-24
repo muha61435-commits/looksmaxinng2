@@ -1,9 +1,9 @@
-# LOOKSMAXXING: From SUB3 to TRUE ADAM — Stage 2 (Forge 1.20.1)
+# LOOKSMAXXING: From SUB3 to TRUE ADAM — Stage 3 (Forge 1.20.1)
 
 ## Build (Windows / Linux / macOS)
 1. Install **JDK 17** (e.g. Temurin 17) and **Gradle 8.1.1** (https://gradle.org/releases/).
 2. In this folder run:  `gradle build`   (first run downloads Minecraft + Forge, takes several minutes, needs internet)
-3. The mod is at `build/libs/looksmaxxing-0.2.0.jar` -> copy it into `.minecraft/mods`.
+3. The mod is at `build/libs/looksmaxxing-0.3.0.jar` -> copy it into `.minecraft/mods`.
 4. Play with **Forge 1.20.1 (47.2.0 or newer)**.
 
 Alternative: download the official Forge 1.20.1-47.2.0 MDK, and copy the `src/` folder from here over its `src/`
@@ -36,3 +36,12 @@ Test in IDE: `gradle genIntellijRuns` / `gradle genEclipseRuns`, then `runClient
 - Daily strength cap, diminishing returns, cooldown (config: training.dailyStrengthCap).
 - Animations are vanilla arm swings + particles/sound (real custom animations need GeckoLib, planned for later).
 - Not yet: push-ups/squats, mirror, grooming, hammer ritual, mog battles.
+
+
+## Stage 3 additions
+- Real model changes for you and other players: height, frame, muscle (scale) + 6 hairstyles with color, plus nose size, chin, jaw and cheek geometry that uses your own skin texture (may look slightly off on some skins). Jaw/chin get more defined with hammer training.
+- Skin tone and eye spacing are saved but not rendered (your custom skin is never recolored).
+- Full-Length Mirror block: right-click = edit your look (valid for 1 minute, server-checked); sneak + right-click = posture practice.
+- Grooming Kit and Skincare Kit (durability, daily limit, perfume particles) raise Grooming / Facial harmony.
+- Jawline Training Hammer + Enchanted Training Dummy: magical ritual (never hits a player). Raises Jawline, Chin, Confidence, Facial harmony; diminishing returns, cooldown, stamina cost, 6 sessions/day, excess = no benefit + stamina loss, 5% rare transformation effect.
+- Battle performance is NOT counted in the rating until Mog Arena exists (config weights.battlesEnabled=false), so TRUE ADAM is reachable now with all stats at 100.
